@@ -4,11 +4,11 @@ In this lab you will review the machine requirements necessary to follow this tu
 
 ## Virtual or Physical Machines
 
-This tutorial requires four (4) virtual or physical ARM64 machines running Debian 12 (bookworm). The follow table list the four machines and thier CPU, memory, and storage requirements.
+This tutorial requires four (4) virtual or physical x86 machines running Debian 12 (bookworm). The follow table list the four machines and thier CPU, memory, and storage requirements.
 
 | Name    | Description            | CPU | RAM   | Storage |
 |---------|------------------------|-----|-------|---------|
-| jumpbox | Administration host    | 1   | 512MB | 10GB    |
+| jumpbox | Administration host    | 1   | 2GB   | 10GB    |
 | server  | Kubernetes server      | 1   | 2GB   | 20GB    |
 | node-0  | Kubernetes worker node | 1   | 2GB   | 20GB    |
 | node-1  | Kubernetes worker node | 1   | 2GB   | 20GB    |
@@ -22,9 +22,8 @@ uname -mov
 After running the `uname` command you should see the following output:
 
 ```text
-#1 SMP Debian 6.1.55-1 (2023-09-29) aarch64 GNU/Linux
+#1 SMP PREEMPT_DYNAMIC Debian 6.1.112-1 (2024-09-30) x86_64 GNU/Linux
 ```
 
-You maybe surprised to see `aarch64` here, but that is the official name for the Arm Architecture 64-bit instruction set. You will often see `arm64` used by Apple, and the maintainers of the Linux kernel, when referring to support for `aarch64`. This tutorial will use `arm64` consistently throughout to avoid confusion.
 
 Next: [setting-up-the-jumpbox](02-jumpbox.md)
